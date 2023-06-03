@@ -1,0 +1,21 @@
+.product {
+  background-color: rgb(197, 243, 186);
+  width: 300px;
+  margin: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid black 1px;
+}
+
+.item {
+  margin: 10px;
+  text-align: start;
+}
+
+.list-products {
+  background-color: bisque;
+  width: fit-content;
+  padding: 5px;
+  margin-top: 5px;
+}
