@@ -8,7 +8,9 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, ListProductsComponent],
+  // FormsModule - potrzebne do korzystania z ngModel
   imports: [BrowserModule, FormsModule],
+  // ProductService - potrzebne do korzystania z servicu wewnątrz modułu (czyli w tym przypadku w całej aplikacji bo moduł jest 1)
   providers: [ProductService],
   bootstrap: [AppComponent],
 })

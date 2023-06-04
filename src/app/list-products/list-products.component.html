@@ -1,4 +1,5 @@
 <div class="list-products">
+  <!-- Iterujemy tutaj po tablicy products która jest zdefiniowana w pliku .ts -->
   <div *ngFor="let product of products" class="product">
     <h3 class="product-title item">
       <a [title]="product.name + ' details'">
@@ -6,15 +7,19 @@
       </a>
     </h3>
 
+    <!-- Paragraf jest warunkowy, jeśli nie istnieje descriptio nie zostanie wyrenderowany -->
     <p class="description item" *ngIf="product.description">
       Description: {{ product.description }}
     </p>
+    <!-- przy wiązaniu metod (delete) mozemu równiez przekazać zmienne np product albo cały obiekt eventu $event -->
     <button class="delete" (click)="delete(product)">X</button>
   </div>
+  <!-- Przy uyciu ngModel pamiętajcie o dodaniu do app.module.ts FormsModule w imports -->
   <input
     type="text"
     [(ngModel)]="productName"
     [ngModelOptions]="{ standalone: true }"
   />
+
   <button type="submit" (click)="clickHandler()">Click Me</button>
 </div>
