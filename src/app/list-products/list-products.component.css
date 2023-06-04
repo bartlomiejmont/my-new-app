@@ -19,3 +19,8 @@
   padding: 5px;
   margin-top: 5px;
 }
+
+.delete {
+  background-color: red;
+  width: 25px;
+}

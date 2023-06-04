@@ -9,6 +9,12 @@
     <p class="description item" *ngIf="product.description">
       Description: {{ product.description }}
     </p>
+    <button class="delete" (click)="delete(product)">X</button>
   </div>
-  <button (click)="clickHandler()">Click Me</button>
+  <input
+    type="text"
+    [(ngModel)]="productName"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <button type="submit" (click)="clickHandler()">Click Me</button>
 </div>

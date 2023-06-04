@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from './interface';
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,5 @@ import { Product } from './interface';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  products: Product[] = [
-    { name: 'produkt', description: 'dadasaefaf' },
-    { name: 'tylko name', description: 'opis' },
-  ];
-  animals: Product[] = [{ name: 'dog' }, { name: 'cat' }];
+  constructor(public productService: ProductService) {}
 }
